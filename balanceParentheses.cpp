@@ -6,27 +6,6 @@
 // we have to print the all possible combinations
 #include<iostream>
 using namespace std;
-void parentheses(char*a, int i, int o , int c, int n ){
-    // base case 
-    if(i==2*n){  
-        a[i]='\0';
-         cout<<a<<endl;
-       return;
-    }
-
-    //recursive case
-    if (o<n)
-    {
-        a[i]='(';
-        parentheses(a,i+1,o+1,c,n);
-    }
-    if (o>c)
-    {
-        a[i]=')';
-        parentheses(a,i+1,o,c+1,n);
-    }
-    
-}
 int noOfparenthese(int i,int o,int c , int n){
     // base case 
     int t;
